@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>
+<link rel="stylesheet" href="Register.css">
+</head>
+<body>
+<div class="full-page">
+<div class="navigation-bar">
+<div class="logo">
+<a href='front page.html'> Back </a>
+</div>
+<nav>
+<ul id='MenuItems'>
+<li><button class='loginbtn'
+onclick="document.getElementById('login-form').style.display='block'"
+style="width:auto;"><a href="front page.html"> Next </button></a></li>
+</ul>
+</nav>
+</div>
+<div id='login-form' class="login-page">
+	<div class="form-box">
+	<div class="form">
+	<form class="login-form">
+	<center><h1 class="main-heading">Login Form</h1></center>
+	<input type="text" name="user name" class="text-box" placeholder="user name" required>
+	<input type="password"name="password" class="text-box" placeholder="password" required>
+	<button> LOGIN</button>
+	<p class="asking">Forget Password?</p>
+	<p class="asking">Not Registered?
+	<a href="#">Register</a></p>
+	
+	</form>
+<form class="register-form">
+	<center><h1 class="main-heading">Register Form</h1></center>
+	<input type="text" name="username" class="text-box" placeholder="user name" required>
+	<input type="emailid" name="emailid" class="text-box" placeholder="email-id" required>
+	<input type="New password" name="New password" class="text-box" placeholder="New password" required>
+	<input type="Confirm password" name="Confirm password" class="text-box" placeholder="Confirm password" required>
+	<button>REGISTER</button>
+	<p class="asking">Already Registered?<a href="#">Login</a>
+	</p>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+var modal= document.getElementById("login-form");
+window.onclick = function(event)
+{
+if(event.target == modal)
+{
+modal.style.display = "none";
+}
+}
+</script>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+<script>
+$('.asking a').click(function()
+{$('form').animate({height:"toggle",opacity:"toggle"},"slow");});
+</script>
+
+</body>
+</html>
